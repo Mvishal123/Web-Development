@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        border: 5px solid rgb(69, 69, 69);
+        height: 95vh;
+        background-color: rgb(198, 149, 77);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    body > h1{
+        color: #fff;
+        margin-bottom: 1em;
+        letter-spacing: 0.2em;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .container{
+        border: 4px solid black;
+        width: 500px;
+        height: 500px;
+        text-align: center;
+        background-color: antiquewhite;
+    }
+
+    .grandparent{
+        border: 4px solid black;
+        height: 300px;
+        width: 300px;
+        margin: auto;
+        background-color: aquamarine;
+}
+
+    .parent{
+        border: 4px solid black;
+        height: 200px;
+        width: 200px;
+        margin: auto;
+        background-color: rgb(234, 255, 0);
+}
+    .child{
+        border: 2px solid black;
+        height: 100px;
+        width: 100px;
+        margin: auto;
+        background-color: rgb(255, 127, 127);
+}
+
+.btn{
+    background-color: rgb(255, 234, 0);
+    padding: 10px 10px;
+    margin: 10px 0;
+    border-radius: 10px ;
+}
+
+ </style>
+  <body>
+    <h1>PROPAGATION IN JS</h1>
+    <div class="container">
+      <h1>CONTAINER</h1>
+      <div class="grandparent">
+        <h2>GRANDPARENT</h2>
+        <div class="parent">
+          <h3>PARENT</h3>
+          <div class="child"><h4>CHILD</h4><button class="btn">click me!</button></div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- // by default the capture is in true which is event capturing
+    // For propagation to occur all should have the same event -->
+
+    <script>
+        const container = document.querySelector('.container');
+        const grandparent = document.querySelector('.grandparent');
+        const parent = document.querySelector('.parent');
+        const child = document.querySelector('.child');
+        const button = document.querySelector('.btn')
+
+        container.addEventListener('click', (e) =>{
+            console.log("container");
+        }, false);
+        grandparent.addEventListener('click', (e) =>{
+            console.log("grandparent");
+        }, false);
+        parent.addEventListener('click', (e) =>{
+            console.log("parent");
+        }, false);
+        button.addEventListener('click', (e) =>{
+            console.log("child");
+        }, false);
+    </script>
+  </body>
+</html>
