@@ -1,0 +1,62 @@
+*{
+  margin: 0;
+  padding: 0;  
+}
+
+body{
+    background: url(lib4.jpg) no-repeat center center/ cover;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+}
+
+h1{
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.558);
+    border: 2px solid #fff;
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container{
+    height: 330px;
+    background-color: rgba(0, 0, 0, 0.592);
+    box-shadow: 0 0 5px 2px;
+    width: 450px;
+    border: 2px solid white;
+}
+.main-content{
+    height: min-content;
+}
+
+.quote{
+    margin: 10px 20px;
+    font-size: 1.5em;
+    margin-top: 50px;
+    font-family: roboto;
+    color: #fff;
+
+}
+
+.person{
+    font-size: 2em;
+    text-transform: uppercase;
+    margin: 25px 10px 0 10px;
+    font-family: roboto;
+    color: #fff;
+}
+
+.change-btn{
+    margin-top: 20px ;
+}
+.change-btn button{
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-family: roboto;
+    background-color: rgb(255, 255, 255);
+    font-size: 1em;
+}
